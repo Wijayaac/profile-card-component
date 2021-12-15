@@ -5,49 +5,36 @@
 body {
   font-size: $font-regular;
   font-family: $main-font;
+  background-color: $dark-cyan;
 }
 
 .page {
-  background-color: $dark-cyan;
   overflow: hidden;
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 100vh;
+    min-height: 97vh;
   }
 
   &__image-top {
     position: absolute;
-    top: -25%;
-    left: -40%;
-    height: 350px;
-    width: 350px;
-    object-fit: cover;
+    top: -40%;
+    left: -30%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
     object-position: center;
-
-    @include breakpoint-up(medium) {
-      top: -35%;
-      left: -10%;
-      width: 750px;
-      height: 750px;
-    }
   }
   &__image-bottom {
     position: absolute;
-    bottom: -15%;
-    right: -40%;
-    height: 350px;
-    width: 350px;
-    object-fit: cover;
+    bottom: -50%;
+    right: -27%;
+    height: 98%;
+    width: 120%;
+    object-fit: contain;
     object-position: center;
-    @include breakpoint-up(medium) {
-      bottom: -40%;
-      right: -10%;
-      width: 750px;
-      height: 750px;
-    }
   }
 }
 
@@ -57,11 +44,8 @@ body {
   background-color: white;
   border-radius: 20px;
   overflow: hidden;
-  width: 90vw;
+  min-width: 300px;
   box-shadow: 0 0 40px $dark-blue;
-  @include breakpoint-up(medium) {
-    width: 30vw;
-  }
   &__header {
     background-position: center;
     background-size: cover;
@@ -108,5 +92,9 @@ body {
       font-size: 12px;
       font-weight: 400;
     }
+  }
+  &__footer-item {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
